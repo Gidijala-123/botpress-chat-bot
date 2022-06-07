@@ -1,0 +1,959 @@
+doctype html
+html(lang="en")
+  head
+    title GBR Food Delivery Web-App
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=yes")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css", rel="stylesheet")
+    //- link(rel="stylesheet", href="/brh-chat-bot/public/stylesheets/stylesheets.css")
+
+  style.
+    body::-webkit-scrollbar {
+      display: none;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #fff9cf;
+    }
+    .navbar {
+      position: fixed;
+      z-index: 10;
+      background-image: linear-gradient(to right, #132b45, #124366);
+    }
+    .nav-logo {
+      height: 2.5rem;
+    }
+
+    /* nav bar dropdown menu */
+    .dropdown-submenu {
+      position: relative;
+      font-weight: 500;
+    }
+    .dropdown-item {
+      color: white;
+    }
+
+    .gbr-drop {
+      background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+    }
+
+    .dropdown-submenu > .dropdown-menu {
+      background-image: linear-gradient(#ffdde1, #ee9ca7);
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+      background-image: linear-gradient(#6dd5ed, #2193b0);
+    }
+
+    .dropdown-submenu > a:after {
+      display: block;
+      content: " ";
+      float: right;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-left-color: white;
+      margin-top: 5px;
+      margin-right: -10px;
+    }
+    .dropdown-submenu:hover > a:after {
+      border-left-color: black;
+    }
+    .dropdown-anchor {
+      text-decoration: none !important;
+    }
+    .dropdown-item:hover {
+      background-color: transparent;
+    }
+    .banner-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url("images/slide2.jpg");
+      height: 100vh;
+      width: 100%;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 2.8rem;
+    }
+    .main-heading {
+      color: white;
+      font-size: 4rem;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+    }
+    h1 {
+      color: white;
+      font-size: 4rem;
+      padding-top: 15rem;
+    }
+    .hungry-para {
+      color: #218838;
+      text-shadow: 0 0 3px #218838;
+      font-style: italic;
+      font-size: 2rem;
+      padding-top: 9rem;
+    }
+    .banner-para {
+      color: gold;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+    .banner-btn {
+      width: 10rem;
+      height: 3rem;
+      font-weight: 500;
+    }
+    /* Why choose us css */
+
+    .heading {
+      color: #132b45;
+      font-size: 2.5rem;
+      font-weight: 700;
+      padding-top: 0px;
+    }
+    .wcu-section-description {
+      color: #5a7184;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-align: justify;
+    }
+    .wcu-card {
+      height: 17rem;
+      text-align: center;
+      background-color: #132b45;
+      color: #132b45;
+      border: 1px solid black;
+      border-radius: 1rem;
+    }
+    .wcu-card-image {
+      width: 6rem;
+      padding: 0.5rem;
+    }
+    .title {
+      color: wheat;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 0px;
+    }
+    .description {
+      color: white;
+      font-size: 1rem;
+    }
+    b,
+    .cost {
+      color: wheat;
+    }
+    .heading {
+      color: #132b45;
+    }
+    /* explore menu css */
+
+    .explore-card {
+      border: 1px solid black;
+      background-color: #132b45;
+      border-radius: 1rem;
+      vertical-align: middle;
+    }
+    .explore-img {
+      height: 15rem;
+      margin: 0.5rem;
+      border-radius: 0.7rem;
+      vertical-align: middle;
+      max-height: 100%;
+      max-width: 100%;
+    }
+    .viewall-icon {
+      color: orange;
+      font-weight: 500;
+      text-align: right;
+    }
+    .price {
+      color: orange;
+    }
+    /* Healthy menu */
+    .healthy-btn {
+      width: 10rem;
+      margin: 1rem 0rem;
+    }
+    .healthy-card {
+      border: 1px solid black;
+      background-color: #132b45;
+      border-radius: 1rem;
+      color: white;
+    }
+    .healthy-heading {
+      color: wheat;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0.5rem;
+      padding-left: 0rem;
+    }
+    .healthy-para {
+      font-size: 1rem;
+      color: white;
+      text-align: justify;
+    }
+    .healthy-img {
+      height: 15rem;
+      border-radius: 0.6rem;
+    }
+    /* delivery and payment */
+    .payment-icon {
+      height: 3rem;
+      width: 3rem;
+      margin: 0.5rem;
+      margin-left: 1rem;
+      margin-top: 0rem;
+      /* filter: brightness(0) invert(1); */
+    }
+    .payment-btn-md {
+      width: 10rem;
+      height: 3rem;
+    }
+    /* thankyou section */
+    .thankyou-section {
+      background-image: radial-gradient(#a8e063, #56ab2f);
+      border-radius: 1rem;
+    }
+    .thankyou-heading {
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0.5rem;
+      padding-top: 0.8rem;
+      padding-left: 0rem;
+    }
+    .thankyou-para {
+      font-size: 1rem;
+      color: white;
+      text-align: justify;
+    }
+    .thankyou-img1 {
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
+    }
+    .thankyou-img2 {
+      height: 14rem;
+      width: 100%;
+      margin: 1.5rem 0rem;
+      padding: 0rem 4rem;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
+    }
+    .thankyou-b {
+      color: white;
+    }
+    #tq-model-content {
+      background-image: linear-gradient(#a8e063, #56ab2f);
+    }
+    /* model */
+    .modal-content {
+      background-image: linear-gradient(#ff9966, #ff5e62);
+      color: white;
+    }
+    .model-btn-div {
+      background-image: linear-gradient(to right, #ddd6f3 0%, #5b86e5 100%);
+      border-radius: 5rem;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      z-index: 2;
+    }
+    .model-btn-div button {
+      align-items: center;
+      background: #6dd5ed;
+      color: #000;
+      border-radius: 5rem;
+      display: flex;
+      justify-content: center;
+      transition: background 0.5s ease;
+    }
+    .model-btn-div:hover button {
+      background: transparent;
+      color: #fff;
+    }
+    /* icons */
+    .follow-us {
+      margin: 5rem 0rem;
+    }
+    .followus-heading {
+      color: #132b45;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0.5rem;
+    }
+    .fa {
+      /* background-image: radial-gradient( #3399ff,  #3b5998); */
+      -webkit-text-stroke: 2.2px #fff9cf;
+    }
+    .fa-facebook {
+      color: #3b5998;
+    }
+    .fa-instagram {
+      color: red;
+    }
+    .fa-twitter {
+      color: #55acee;
+    }
+    .fa-linkedin-in {
+      color: #0077b5;
+    }
+    .fa-whatsapp {
+      color: #43d854;
+    }
+    .fa-hover {
+      cursor: pointer;
+    }
+    .copyright-div {
+      margin-top: 0px;
+      text-align: center;
+    }
+    /* footer section */
+    .footer-section {
+      background-image: radial-gradient(#132b45, #000000);
+      height: 90.7vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: space-between;
+      align-self: auto;
+      /* padding:5rem 3rem;*/
+    }
+    .footer-cont {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+      border-radius: 1rem;
+      margin: auto;
+    }
+    .footer-icon {
+      font-size: 2.4rem;
+      color: #ff5e14;
+    }
+    .footer-main-div {
+      background-color: #ff5e14;
+    }
+    .icon-div-heading {
+      color: white;
+      font-size: 1.2rem;
+    }
+    .icon-div-decp {
+      color: grey;
+      font-weight: 600;
+    }
+    .dropcap {
+      float: left;
+      font-size: 135%;
+      font-weight: normal;
+      font-family: "Open Sans Condensed";
+      color: #ff5e14;
+      margin: -13px 5px -13px 0px;
+    }
+    .dropcap::first-letter {
+      color: white;
+      font-weight: bold;
+    }
+    .footer-hr {
+      background-color: #ff5e14;
+      border: 0.5px solid #ff5e14;
+      width: 100%;
+    }
+    /* out partners */
+    .partner-icon {
+      height: 3rem;
+    }
+    .slider-v2 {
+      position: relative;
+      display: block;
+      width: 4rem;
+      height: 1.5rem;
+      cursor: pointer;
+      border-radius: 1.5rem;
+      transition: 350ms;
+      background: #d39e00;
+      box-shadow: 0 0.07rem 0.1rem -0.1rem rgba(0, 0, 0, 0.4) inset,
+        0 0.05rem 0.08rem -0.01rem blue;
+    }
+
+    .slider-v2::after {
+      position: absolute;
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      top: 0.15rem;
+      left: 0.2rem;
+      border-radius: 50%;
+      transition: 250ms ease-in-out;
+      background: #44cc66;
+      box-shadow: 0 0.1rem 0.15rem -0.05rem rgba(255, 255, 255, 0.9) inset,
+        0 0.2rem 0.2rem -0.12rem rgba(0, 0, 0, 0.5);
+    }
+
+    .slider-v2::before {
+      position: absolute;
+      content: "";
+      width: 3.45rem;
+      height: 1rem;
+      top: 0.27rem;
+      left: 0.25rem;
+      border-radius: 0.75rem;
+      transition: 250ms ease-in-out;
+      background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.1)),
+        #d0d0d0;
+      box-shadow: 0 0.08rem 0.15rem -0.1rem rgba(0, 0, 0, 0.5) inset,
+        0 0.05rem 0.08rem -0.01rem rgba(255, 255, 255, 0.7), 0 0 0 0 #132b45 inset;
+    }
+
+    input:checked + .slider-v2::before {
+      box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset,
+        0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7), 3em 0 0 0 #132b45 inset;
+    }
+
+    input:checked + .slider-v2::after {
+      left: 2.6rem;
+    }
+
+    input.tg-inpput {
+      position: absolute;
+      left: 0px;
+      visibility: hidden;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    .wrap {
+      position: relative;
+      width: 4rem;
+      margin-left: auto;
+      margin-top: auto;
+      margin-right: 1rem;
+      position: relative;
+    }
+    .search-css {
+      height: 2rem;
+      background-color: #fff9cf;
+    }
+    .search-css::placeholder {
+      color: grey;
+    }
+
+    /* Light Theam */
+    .dark-mode {
+      background-color: red;
+      color: white;
+    }
+
+  body
+    .food-delivery-main-section
+      nav.navbar.nav-theam.navbar-expand-lg.navbar-dark.w-100
+        // Navbar brand
+        a.navbar-brand(href="#")
+          img.nav-logo.fa-spin.shadow-sm(src="images/cutlery.png")
+        // Collapse button
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#basicExampleNav", aria-controls="basicExampleNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+          small Menu
+        // Collapsible content
+        #basicExampleNav.collapse.navbar-collapse
+          // Links
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href="#") Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href="#") Features
+            li.nav-item
+              a.nav-link(href="#") Pricing
+            // Dropdown
+            li.nav-item.dropdown.multi-level-dropdown
+              a#menu.dropdown-anchor.nav-link.dropdown-toggle.w-100(href="#", data-toggle="dropdown") Location
+              ul.dropdown-menu.mt-3.mb-3.gbr-drop
+                li.dropdown-item.dropdown-submenu.gbr-drop.mb-2
+                  a.dropdown-anchor.text-white.dropdown-toggle.w-100(href="#", data-toggle="dropdown") Kakinada
+                  ul.dropdown-menu.rounded.mt-1
+                    li.dropdown-item.p-2
+                      a.dropdown-anchor.text-black.w-100(href="#") GandhiNagar
+                    li.dropdown-item.p-2
+                      a.dropdown-anchor.text-black.w-100(href="#") Cinema road
+                    li.dropdown-item.dropdown-submenu.p-2
+                      a.dropdown-anchor.dropdown-toggle.text-white.w-100.font-weight-normal(href="#", data-toggle="dropdown") Ramaraopeta
+                      ul.dropdown-menu.mt-3.rounded.primary-color.border-0.z-depth-1.r-100
+                        li.dropdown-item.p-2
+                          a.dropdown-anchor.text-black.w-100(href="#") Pattabhi street
+                        li.dropdown-item.p-2
+                          a.dropdown-anchor.text-black.w-100(href="#") Ashok nagar
+                li.dropdown-item.dropdown-submenu
+                  a.dropdown-anchor.dropdown-toggle.text-white.w-100(href="#", data-toggle="dropdown") Click me 
+                  ul.dropdown-menu.mt-2.rounded.border-0.z-depth-1.r-100
+                    li.dropdown-item.p-2
+                      a.dropdown-anchor.text-white.w-100(href="#") How
+                    li.dropdown-item.p-2
+                      a.dropdown-anchor.text-white.w-100(href="#") are
+                    li.dropdown-item.p-2
+                      a.dropdown-anchor.text-white.w-100(href="#") you 
+          // Links
+          //
+            <div class="wrap"><input class="tg-input" id="s4" type="checkbox" checked onclick="myFunction()"><label
+            class="slider-v2" for="s4"> </label></div>
+          form.form-inline
+            .md-form.my-0
+              input.form-control.mr-sm-2.search-css(type="text", placeholder="Search your item here...", aria-label="Search")
+        // Collapsible content
+      .banner-section.d-flex.flex-column.justify-content-center.text-center
+        .col-12
+          p.hungry-para Are You Hungry?
+          h1.main-heading Get delicious food at any time
+          p.banner-para Eat healthy, live long
+          .m-5.mb-4
+            button.banner-btn.btn.bg-warning.rounded-pill.text-black.mt-2.mt-md-4.ml-4.mr-4.mb-md-5.mb-4
+              | View
+              | More
+            button.banner-btn.btn.btn-success.rounded-pill.text-white.mt-2.mt-md-4.ml-4.mr-4.mb-md-5.mb-4
+              | Order
+              | Now
+      .wcu-section.pt-5
+        .container-fluid
+          .row
+            .col-12
+              h1.heading Why Choose Us?
+              p.wcu-section-description
+                | We use both original recipes and classic versions of famous
+                | food items.
+            .col-12.col-md-4
+              .wcu-card.p-3.mb-3.shadow-lg
+                img.wcu-card-image(src="images/food.png")
+                h1.title Food Service
+                p.description
+                  | Experience fine dining at the comfort of your home. All our orders
+                  | are carefully packed and arranged to give you the nothing less than perfect.
+            .col-12.col-md-4
+              .wcu-card.p-3.mb-3.shadow-lg
+                img.wcu-card-image(src="images/noun_fresh food_3374221.png", style="filter: brightness(0) invert(1);")
+                h1.title Fresh Food
+                p.description
+                  | The Fresh Food group provides fresh-cut fruits and vegetables
+                  | directly picked from our partner farms and farm houses so that you always get them tree
+                  | to plate.
+            .col-12.col-md-4
+              .wcu-card.p-3.mb-3.shadow-lg
+                img.wcu-card-image(src="images/best-price.png")
+                h1.title Best Offers
+                p.description Food Coupons &amp; Offers upto
+                  em
+                    b  50% OFF 
+                  | and Exclusive
+                  | Promo Codes on All Online Food Orders.
+      .explore-menu
+        .container-fluid
+          .row
+            .col-12
+              h1.heading Explore Menu
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/nonvegitem.jpg")
+                h1.title.pl-2 Non - Veg Starters
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 150/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/vegitem.jpg")
+                h1.title.pl-2 Veg Starters
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 120/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/soups.jpg")
+                h1.title.pl-2 Soups
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 70/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/seafood.jpg")
+                h1.title.pl-2 Fish &amp; Sea-Food
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 100/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/maincourse.jpg")
+                h1.title.pl-2 Main Course
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 130/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/noodles.jpg")
+                h1.title.pl-2 Noodles
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 80/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/salads.jpg")
+                h1.title.pl-2 Salads
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 125/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+            .col-12.col-md-3
+              .explore-card.card.shadow-lg.mb-4.p-2
+                img.explore-img.mb-3(src="images/desserts.jpg")
+                h1.title.pl-2 Desserts
+                .d-flex.flex-row.justify-content-between.pl-2.pr-2
+                  p.cost Starting from 
+                    em
+                      b.price 90/-
+                  p.viewall-icon View All 
+                    i.fas.fa-arrow-right
+      .healthy-card.m-3
+        .container-fluid
+          .row
+            .col-12.col-md-7.d-md-none
+              h1.col-12.healthy-heading Fresh, Healthy, Organic, Delicious Fruits
+            .col-12.col-md-5
+              img.healthy-img.w-100.mb-3.mt-md-3(src="images/freshfood.jpg")
+            .col-12.col-md-7.m-md-auto
+              h1.col-12.healthy-heading.d-none.d-md-block
+                | Fresh, Healthy, Organic, Delicious Fruits
+              p.healthy-para.pl-2.pr-2
+                | Say no to harmful chemicals and go fully organic with our
+                | range of
+                | fresh fruits and veggies. Pamper your body and your senses with
+                | the true and unadulterated gifts from mother nature. with the true
+                | and unadulterated gifts from mother nature.
+              button.healthy-btn.btn.bg-success.rounded-pill.text-white.ml-2 Watch Video
+      .delivery-payments-section.healthy-card.m-3
+        .container-fluid
+          .row
+            .col-12.col-md-7.d-md-none
+              h1.col-12.healthy-heading Delivery and payment
+            .col-12.col-md-5.order-md-last
+              img.healthy-img.w-100.mb-3.mt-md-3(src="images/deliverypayment.jpg")
+            .col-12.col-md-7.m-md-auto
+              h1.col-12.healthy-heading.d-none.d-md-block Delivery and Payments
+              p.healthy-para.pl-2.pr-2
+                | Enjoy hassle free payment with the plenitude of payment
+                | options available for you. Get live tracking and locate your food on a live map. It&apos;s quite
+                | a sight to see your food arrive to your door. Plus, you get a
+                em
+                  b  5% discount 
+                | on
+                | every order every time you pay online.
+              .d-flex.flex-row.justify-content-center.justify-content-md-start
+                img.payment-icon.mt-3(src="images/paypal.png")
+                img.payment-icon.mt-3(src="images/visa.png")
+                img.payment-icon.mt-3(src="images/americanexpress.png")
+                img.payment-icon.mt-3(src="images/mastercard.png")
+                button.payment-btn-md.btn.bg-warning.rounded-pill.text-black.font-weight-bold.ml-3.mt-3.d-none.d-md-block(data-toggle="modal", data-target="#staticBackdrop") Order Now
+              .text-center.d-md-none
+                button.payment-btn-xm.btn.bg-warning.rounded-pill.text-black.font-weight-bold.ml-2.mb-3.mt-1(data-toggle="modal", data-target="#staticBackdrop") Order Now
+      #staticBackdrop.modal.fade(data-backdrop="static", data-keyboard="false", tabindex="-1", aria-labelledby="staticBackdropLabel", aria-hidden="true")
+        .modal-dialog.modal-dialog-centered.ml-3.mr-3.m-md-auto
+          .modal-content.mt-md-3.mb-md-3
+            .modal-header
+              h5#staticBackdropLabel.modal-title Bill Payment
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            .modal-body
+              .container
+                .row
+                  .col-12
+                    h4.mb-3 Billing address
+                    form.needs-validation(novalidate)
+                      .row
+                        .col-md-6.mb-3
+                          label(for="firstName") First name
+                          input#firstName.form-control(type="text", placeholder="Enter your First Name", required)
+                          .invalid-feedback Valid first name is required
+                        .col-md-6.mb-3
+                          label(for="lastName") Last name
+                          input#lastName.form-control(type="text", placeholder="Enter your Last Name",  required)
+                          .invalid-feedback Valid last name is required
+                      .mb-3
+                        label(for="username") Username
+                        .input-group
+                          .input-group-prepend
+                            span.input-group-text @
+                          input#username.form-control(type="text", placeholder="Username", required)
+                          .invalid-feedback(style="width: 100%;")
+                            | Your username is
+                            | required
+                      .mb-3
+                        label(for="email") Email 
+                          span.text-muted (Optional)
+                        input#email.form-control(type="email", placeholder="you@example.com")
+                        .invalid-feedback
+                          | Please enter a valid email address for
+                          | shipping updates
+                      .mb-3
+                        label(for="address") Address
+                        input#address.form-control(type="text", placeholder="1234 Main St", required)
+                        .invalid-feedback Please enter your shipping address
+                      .mb-3
+                        label(for="address2") Address 2 
+                          span.text-muted (Optional)
+                        input#address2.form-control(type="text", placeholder="Apartment or suite")
+                      .row
+                        .col-md-5.mb-3
+                          label(for="country") Country
+                          select#country.custom-select.d-block.w-100(required)
+                            option(value=) Choose...
+                            option United States
+                          .invalid-feedback Please select a valid country
+                        .col-md-4.mb-3
+                          label(for="state") State
+                          select#state.custom-select.d-block.w-100(required)
+                            option(value=) Choose...
+                            option California
+                          .invalid-feedback Please provide a valid state
+                        .col-md-3.mb-3
+                          label(for="zip") Zip
+                          input#zip.form-control(type="text", placeholder="Enter ZIP Code", required)
+                          .invalid-feedback Zip code required
+                      hr.mb-4
+                      .custom-control.custom-checkbox
+                        input#same-address.custom-control-input(type="checkbox")
+                        label.custom-control-label(for="same-address")
+                          | Shipping address is the same as my billing
+                          | address
+                      .custom-control.custom-checkbox
+                        input#save-info.custom-control-input(type="checkbox")
+                        label.custom-control-label(for="save-info") Save this information for next time
+                      hr.mb-4
+                      h4.mb-3 Payment
+                      .d-block.my-3
+                        .custom-control.custom-radio
+                          input#credit.custom-control-input(name="paymentMethod", type="radio", checked, required)
+                          label.custom-control-label(for="credit")
+                            | Credit
+                            | card
+                        .custom-control.custom-radio
+                          input#debit.custom-control-input(name="paymentMethod", type="radio", required)
+                          label.custom-control-label(for="debit") Debit card
+                        .custom-control.custom-radio
+                          input#paypal.custom-control-input(name="paymentMethod", type="radio", required)
+                          label.custom-control-label(for="paypal") Paypal
+                      .row
+                        .col-md-6.mb-3
+                          label(for="cc-name") Name on card
+                          input#cc-name.form-control(type="text", placeholder="Enter Full Name", required)
+                          small.text-muted
+                            | Full name as displayed on
+                            | card
+                          .invalid-feedback Name on card is required
+                        .col-md-6.mb-3
+                          label(for="cc-number")
+                            | Credit card
+                            | number
+                          input#cc-number.form-control(type="text", placeholder="Enter Credit card number", required)
+                          .invalid-feedback Credit card number is required
+                      .row
+                        .col-md-3.mb-3
+                          label(for="cc-expiration") Expiration
+                          input#cc-expiration.form-control(type="text", placeholder="Enter expiry date ", required)
+                          .invalid-feedback Expiration date required
+                        .col-md-3.mb-3
+                          label(for="cc-expiration") CVV
+                          input#cc-cvv.form-control(type="text", placeholder="Enter security code", required)
+                          .invalid-feedback Security code required
+                      hr.mb-4
+                      .model-btn-div
+                        button.btn.btn-primary.btn-lg.btn-block(type="submit") Continue to checkout
+      .thankyou-section.m-3
+        .container-fluid
+          .row
+            .col-12.col-md-7.d-md-none
+              h1.thankyou-heading Thank you for being a valuable customer to us
+            .col-12.d-md-none.mb-3
+              img.thankyou-img1.w-100(src="images/gift1.png")
+            .col-12.col-md-5.order-md-last.d-none.d-md-block
+              img.thankyou-img2(src="images/gift1.png")
+            .col-12.col-md-7.m-md-auto
+              h1.thankyou-heading.d-none.d-md-block
+                | Thank you for being a valuable customer to us
+              p.thankyou-para
+                | Thankyou for choosing us for your food delivery. Hope we reached your
+                | expectation. Here is a small gift from our side
+              b.thankyou-b
+                | keep
+                | visiting...THANKYOU!
+              button.payment-btn-md.btn.bg-light.rounded-pill.text-warning.font-weight-bold.mt-3.d-none.d-md-block(data-toggle="modal", data-target="#ThankyouexampleModal") Redeem Now
+            .text-center.d-md-none.m-3
+              button.btn.bg-light.rounded-pill.text-warning.font-weight-bold.mb-3.mt-1(data-toggle="modal", data-target="#ThankyouexampleModal") Redeem Now
+      #ThankyouexampleModal.modal.fade(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+        .modal-dialog.modal-dialog-centered.ml-3.mr-3.m-md-auto
+          #tq-model-content.modal-content.mt-md-3.mb-md-3
+            .modal-header
+              h5#exampleModalLabel.modal-title Here is your gift voucher!
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") &times;
+            .modal-body ...
+            .modal-footer
+              button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+              button.btn.btn-primary(type="button")
+                | Save
+                | changes
+      .follow-us.d-flex.flex-column.justify-content-center
+        .container-fluid
+          .row
+            .col-12
+              h1.followus-heading.text-center.mt-3 Follow us
+            .col-12.d-flex-flex-row-justify-content-center.mt-3.mb-3.text-center
+              span.fa-stack.fa-lg
+                i.fa-hover.fa.fa-circle-o-notch.fa-spin.fa-3x.fa-fw.fa-stack-2x(style="color:#3b5998")
+                i.fa-hover.fa.fa-facebook.fa-stack-1x
+              span.fa-stack.fa-lg
+                i.fa-hover.fa.fa-circle-o-notch.fa-spin.fa-3x.fa-fw.fa-stack-2x(style="color:red")
+                i.fa-hover.fab.fa-instagram.fa-stack-1x
+              span.fa-stack.fa-lg
+                i.fa-hover.fa.fa-circle-o-notch.fa-spin.fa-3x.fa-fw.fa-stack-2x(style="color:#55acee")
+                i.fa-hover.fab.fa-twitter.fa-stack-1x
+              span.fa-stack.fa-lg
+                i.fa-hover.fa.fa-circle-o-notch.fa-spin.fa-3x.fa-fw.fa-stack-2x(style="color:#0077b5")
+                i.fa-hover.fab.fa-linkedin-in.fa-stack-1x
+              span.fa-stack.fa-lg
+                i.fa-hover.fa.fa-circle-o-notch.fa-spin.fa-3x.fa-fw.fa-stack-2x(style="color:#43d854")
+                i.fa-hover.fab.fa-whatsapp.fa-stack-1x
+      .footer-section
+        .container-fluid.footer-cont.pt-md-2
+          .row.p-2.pb-md-4
+            .col-12.col-md-4.mt-4.mt-md-0.icon-div.d-flex.flex-row.justify-content-md-center.justify-content-start
+              .footer-icon.mr-3
+                i.fas.fa-map-marker-alt
+              .footer-icon-decp
+                b.icon-div-heading Find us
+                p.icon-div-decp 7-7-28, KKD
+            .col-12.col-md-4.icon-div.d-flex.flex-row.justify-content-md-center.justify-content-start
+              .footer-icon.mr-3
+                i.fal.fa-phone-alt
+              .footer-icon-decp
+                b.icon-div-heading Call us
+                p.icon-div-decp 9493949394
+            .col-12.col-md-4.icon-div.d-flex.flex-row.justify-content-md-center.justify-content-start
+              .footer-icon.mr-3
+                i.fal.fa-envelope-open-text
+              .footer-icon-decp
+                b.icon-div-heading Mail us
+                p.icon-div-decp Bhargavaggg@gmail.com
+          hr.footer-hr
+          .row.pl-2.pr-2.pb-5.mt-md-5.pl-md-3.pr-md-3
+            .col-12.col-md-4
+              .icon-div.d-flex.flex-row.justify-content-center
+                .footer-icon.mr-2
+                  p.dropcap BG
+                .footer-icon-decp.text-center
+                  b.icon-div-heading About Me
+                  p.icon-div-decp(style="color:#ff5e14;border-top: 1px solid #ff5e14;font-size:0.8rem;")
+                    | FULL-STACK
+                    | DEVELOPER
+              .icon-div-decp.text-justify
+                p
+                  span(style="color: white") B
+                  | hargava_
+                  span(style="color: #ff5e14") G
+                  | idijala
+                  | is a Full stack Web-Developer He is from Kakinada, Andhra Pradesh. He completed Post
+                  | Graduation in &quot;Master of
+                  | Computer Applications&quot; from JNTUK Universtiy. He likes pencil arts which make him
+                  | passionate towards web designing. His hobbies are listening music, Designing web apps,
+                  | Reading technology
+                  | realted articles and Probably hanging out with his friends &amp;#128513
+            hr.footer-hr.d-md-none
+            .col-12.col-md-4
+              .footer-icon-decp.text-center
+                b.icon-div-heading.text-center(style="border-bottom:2px solid#ff5e14;width:8rem;") Our Partners
+              .row.icon-div-decp.text-center
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/kfc.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/applebees2.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/dominos2.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/dunkindonuts.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/innout.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/dq.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/pizzahut.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/mcdonals.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/starbucks.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/burgerking.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/subway.png")
+                .col-4.col-md-3.p-3.pb-md-1
+                  img.partner-icon(src="images/peppers.png")
+            hr.footer-hr.d-md-none
+            .col-12.col-md-4.text-center
+              b.icon-div-heading(style="border-bottom:2px solid#ff5e14;width:8rem;") Subscriptions
+              p.icon-div-decp.text-justify(style="padding-top:2.3rem;")
+                | For latest updates and
+                | information please don&apos;t forget to subscribe to our news feeds, Kindly fill the form below
+                | by entering your email id
+              .d-flex.flex-row.justify-content-start.text-center.mt-md-4
+                input.w-100(type="text", placeholder="Enter  your E-mail address", style="background-color:#2e2e2e;border:none;padding:0.9rem;")
+                i.fad.fa-envelope-open-text(style="background-color:#ff5e14;padding:0.8rem;font-size:1.5rem")
+        .copyright-div.pt-3.pb-1.pl-3.pr-3.pt-md-3.pb-md-1(style="background-color: #ff5e14;")
+          p.icon-div-decp.mt-md-2(style="color:white;") Copyrights &amp;#169 2021,All Rights Reserved by
+            b(style="color:#000") &quot;BhargavaG&quot;
+  
+  script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
+    
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js", integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", crossorigin="anonymous")
+    
+  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", crossorigin="anonymous")
+    
+  script(src="https://kit.fontawesome.com/20c5629a29.js", crossorigin="anonymous")
+  script(src="http://gbr-pweb.herokuapp.com/assets/modules/channel-web/object_assign.js")
+  script(src="http://gbr-pweb.herokuapp.com/assets/modules/channel-web/inject.js")
+  //- script(src="http://34.255.118.102/assets/modules/channel-web/object_assign.js")
+  //- script(src="http://34.255.118.102/assets/modules/channel-web/inject.js")
+ 
+  script.
+    window.botpressWebChat.init({
+      host: 'http://gbr-pweb.herokuapp.com/', 
+      //- host: 'http://localhost:3000/', 
+      //- host: 'http://34.255.118.102/',
+      botId: 'alvin',
+      //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',
+      //- hideWidget: false, //to hide the bot floating icon from webpage
+    })
+
+    // To open chatbot in full screen when clicked
+    //- window.addEventListener('message', function(event) {
+    //-   if (event.data && event.data.name === 'webchatLoaded') {
+    //-     window.botpressWebChat.mergeConfig({
+    //-       containerWidth: '100%',
+    //-       layoutWidth: '100%',
+    //-     });
+    //-   }
+    //- })
