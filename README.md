@@ -67,4 +67,20 @@ Start your website using cmd "npm start" from the terminal.
 Inorder to customize styles of botpress default code, goto botpress(folder of github) > modules > channel-web > assets > default.css
 Note : If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
 
-  
+
+# Resolving errors while installing yarn
+First delete files/folders metioned in the below path:
+1) C:\Program Files\Nodejs
+2) C:\Users\bhargava\AppData\Roaming\npm do the same for admin folder also(if you opened cmd as admin while installing yarn)
+3) C:\Users\bhargava\AppData\Roaming\npm-cache 
+4) C:\Users\.npmrc or delete any yarn or npm or node related files and folders
+5) C:\Users\bhargava\AppData\local\temp\ delete any yarn or npm or node related files and folders
+6) Delete recycle bin files and delete %temp% files from RUN cmd
+
+> Restart your PC
+> Check wheather all the mentioned files are deleted or not from the path
+> Install nodejs v12.18.1(.msi file) from botpress official documentation
+> Check npm and node versions from the windows cmd (opening in admin is not mandatory) 
+> Enter "npm i --global yarn@1.22.18" in cmd
+> Close the terminal and re-open it to check yarn version by typing "yarn -v" in cmd
+> Now follow remaining steps after yarn installation mentioned in botpress official documentation
