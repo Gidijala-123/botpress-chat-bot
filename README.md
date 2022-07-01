@@ -21,50 +21,45 @@
 - To clone git, we need "git" installed in your PC [Link to download](https://git-scm.com/downloads)
 - Goto folder where you want to copy that git folder
 - Paste the cmd "git clone https://github.com/botpress/botpress.git" and press enter
-- It'll clone the botpress src code from official site in a folder "botpress"
+- It'll clone the botpress src code from official site as a folder "botpress"
 - yarn cache clean
 - yarn
 - yarn build 
   - In this step you may suggest to run "caniuse-lite"
   - You can type the cmd "npx browserslist@latest --update-db" after completion of previous step (don't forcely close).
 - yarn start
-
 **Note :** It'll take 20-30 mins for this entire process of yarn installation depending on internet speed and Don't close forcely assuming that terminal is struck
 
-**V. To create custom nodejs project(to use botpress in this website)**
-In console it'll display botpress is exposed at "http://localhost:3000".
-On clicking the host link, you will be redirected to botpress studio registration page.
-On filling valid details, click on "create bot" > New bot > give a name to the bot(you can't edit botId).
-On successful bot creation, click on the "bot name" where it'll display a emulator.
-Train your bot by clicking on "train bot" button present at the bottom right corner of botpress studio window.
-You can check progress of bot training in the terminal from where you started the botpress.
-With this we've successfully started our server, with this server we've to integrate in our website using <script> tag.
-
-
-# Integrating chatbot in our custom website
-Create a package structure using the following npm cmds
-  > Open npm command prompt
-  > npm install express<space>-g
-  > npm install express-generator<space>-g
-  > cd desktop
-  > express<space>--view=pug<space>projectName
-  > cd projectName
-  > npm install
-  > npm start
-Copy and paste following code into your index.html file
-  > <script src="http://localhost:3000/assets/modules/channel-web/object_assign.js">
-  > <script src="http://localhost:3000/assets/modules/channel-web/inject.js"></script>
-  > <script>
+**V. Creating custom nodejs project(to use botpress in this website)**
+1) In console it'll display botpress server is exposed at "http://localhost:3000"
+2) On clicking the host link, you will be redirected to botpress studio registration page.
+3) Upon successful registration, click on "create bot" > New bot > give a name to the bot(you can give custom botId).
+4) On successful bot creation, click on the "bot name" where it'll display a emulator.
+5) Train your bot by clicking on "train bot" button present at the bottom right corner of botpress studio window.
+6) You can check the progress of bot training in the terminal from where you started the botpress.
+7) With this we've successfully started our server, with this server we've to integrate in our website using <script> tag.
+8) Integrating chatbot in our custom website <br/>
+   a) Create a package structure using the following npm cmds
+   - Open npm command prompt
+   - npm install express<space>-g
+   - npm install express-generator<space>-g
+   - cd desktop
+   - express<space>--view=pug<space>projectName
+   - cd projectName
+   - npm install
+   - npm start
+   b) Copy and paste following code into your index.pug file
+   script(src="http://localhost:3000/assets/modules/channel-web/object_assign.js")
+  script(src="http://localhost:3000/assets/modules/channel-web/inject.js")
+   - <script>
       window.botpressWebChat.init({
-        host: 'http://localhost:3000/', 
-        //- host: 'http://34.255.118.102/',
+        host: 'http://localhost:3000/',
         botId: 'alvin',
         //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',
         //- hideWidget: false, //to hide the bot floating icon from webpage
       })
-    </script>
-</script>
-Change your default port number of your website from bin/www folder of nodejs application inorder to avoid overlapping default port of botpress server(3000).
+     </script>
+  c) Change your default port number of your website from bin/www folder of nodejs application inorder to avoid overlapping default port of botpress server(3000).
 Start your website using cmd "npm start" from the terminal.
 
 
