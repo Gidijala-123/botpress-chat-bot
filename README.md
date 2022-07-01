@@ -27,7 +27,7 @@
 - yarn build 
   - In this step you may suggest to run "caniuse-lite"
   - You can type the cmd "npx browserslist@latest --update-db" after completion of previous step (don't forcely close).
-- yarn start<br/>
+- yarn start <br/>
 
 **Note :** It'll take 20-30 mins for this entire process of yarn installation depending on internet speed and Don't close forcely assuming that terminal is struck
 
@@ -42,29 +42,28 @@
 8) Integrating chatbot in our custom website <br/>
    a) Create a package structure using the following npm cmds
    - Open npm command prompt
-   - npm install express -g
+   - npm install express<space>-g
    - npm install express-generator -g
    - cd desktop
    - express --view=pug projectName
    - cd projectName
    - npm install
    - npm start
-   b) Copy and paste following code into your index.pug file
-   - <script src="http://localhost:3000/assets/modules/channel-web/object_assign.js"></script>
-   - <script src="http://localhost:3000/assets/modules/channel-web/inject.js"></script>
-   - <script> <br/>
-       window.botpressWebChat.init({<br/>
-         host: 'http://localhost:3000/', <br/>
-         botId:"alvin",<br/>
-         //- host: 'http://34.255.118.102/',<br/>
-         //- botId: 'spine',<br/>
-         //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',<br/>
-         //- hideWidget: false, //to hide the bot floating icon from webpage<br/>
-       })<br/>
-     </script>
+   b) Copy and paste following code into your index.pug file<br/>
+      - script(src="http://localhost:3000/assets/modules/channel-web/object_assign.js")
+      - script(src="http://localhost:3000/assets/modules/channel-web/inject.js")
+      - script. <br/>
+        window.botpressWebChat.init({<br/>
+        host: 'http://localhost:3000/', <br/>
+        botId:"alvin",<br/>
+        //- host: 'http://34.255.118.102/',<br/>
+        //- botId: 'spine',<br/>
+        //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',<br/>
+        //- hideWidget: false, //to hide the bot floating icon from webpage<br/>
+        })<br/>
    c) Change your default port number of your website from bin/www folder of nodejs application in-order to avoid overlapping default port of botpress server(3000)<br/>
    d) Start your website using cmd "npm start" from the terminal.
 
 **VI. Modifying botpress src folder **
-- Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
+- Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css
 **Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
