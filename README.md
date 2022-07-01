@@ -28,7 +28,7 @@
   - In this step you may suggest to run "caniuse-lite"
   - You can type the cmd "npx browserslist@latest --update-db" after completion of previous step (don't forcely close).
 - yarn start<br/>
-- 
+
 **Note :** It'll take 20-30 mins for this entire process of yarn installation depending on internet speed and Don't close forcely assuming that terminal is struck
 
 **V. Creating custom nodejs project(to use botpress in this website)**
