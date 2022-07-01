@@ -13,29 +13,25 @@
 **III. Open windows cmd prompt(opening as administrator is not mandatory & below cmds won't work in powershell) and enter below cmds** 
 - npm -v
 - node -v
-- corepack enable (use this cmd only if node version is >12.18.1 else ignore and continue with next step)
-- npm i -g corepack
-- yarn init -2
-- yarn set version stable
-- yarn set version from sources(optional)
-open botpress github page & click code⬇ & copy the URL.
-paste the URL in your pc directory where you want to download that git hub botpress folder.
-enter cd botpress in cmd and type below cmds.
-> yarn cache clean
-> yarn
-> yarn build 
+- npm i --global yarn@1.22.18
+- Close the terminal and re-open it to check yarn version
+- yarn -v
+
+**IV. Now we need to clone botpress from official botpress git repository**
+- To clone git, we need "git" installed in your pc
+- Goto folder where you want to copy that git folder
+- Goto official botpress github repository and copy the URL.
+- paste the cmd >git clone https://github.com/botpress/botpress.git and press enter.
+- yarn cache clean
+- yarn
+- yarn build 
   - In this step you may suggest to run caniuse-lite.
   - You can type the cmd "npx browserslist@latest --update-db" after completion of previous step (don't forcely close).
-> yarn start
+- yarn start
 Note : It'll take 20-30 mins for this entire process of yarn installation and don't close forcely assuming that terminal is struck
 
 
-# To clone botpress from official botpress git repository
-To clone git, we need "git" installed in your pc.
-Goto folder where you want to copy that git folder.
-Goto official botpress github repository and copy the URL.
-paste the cmd "git clone https://github.com/botpress/botpress.git".
-press enter.
+
 
 
 # On successful yarn installation
