@@ -49,28 +49,21 @@
    - npm install
    - npm start
    b) Copy and paste following code into your index.pug file
-   script(src="http://localhost:3000/assets/modules/channel-web/object_assign.js")
-  script(src="http://localhost:3000/assets/modules/channel-web/inject.js")
+   - <script src="http://localhost:3000/assets/modules/channel-web/object_assign.js"></script>
+   - <script src="http://localhost:3000/assets/modules/channel-web/inject.js"></script>
    - <script>
-      window.botpressWebChat.init({
-        host: 'http://localhost:3000/',
-        botId: 'alvin',
-        //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',
-        //- hideWidget: false, //to hide the bot floating icon from webpage
-      })
+       window.botpressWebChat.init({
+         host: 'http://localhost:3000/', 
+         botId:"alvin",
+         //- host: 'http://34.255.118.102/',
+         //- botId: 'spine',
+         //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',
+         //- hideWidget: false, //to hide the bot floating icon from webpage
+       })
      </script>
-  c) Change your default port number of your website from bin/www folder of nodejs application inorder to avoid overlapping default port of botpress server(3000).
-Start your website using cmd "npm start" from the terminal.
+   c) Change your default port number of your website from bin/www folder of nodejs application in-order to avoid overlapping default port of botpress server(3000).
+   d) Start your website using cmd "npm start" from the terminal.
 
-
-# Github botpress folder modification
-Inorder to customize styles of botpress default code, goto botpress(folder of github) > modules > channel-web > assets > default.css
-Note : If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
-
-
-# Resolving errors while installing yarn
-
-> Check npm and node versions from the windows cmd (opening in admin is not mandatory) 
-> Enter "npm i --global yarn@1.22.18" in cmd
-> Close the terminal and re-open it to check yarn version by typing "yarn -v" in cmd
-> Now follow remaining steps after yarn installation mentioned in botpress official documentation
+**VI. Modifying botpress src folder **
+- Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css
+**Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
