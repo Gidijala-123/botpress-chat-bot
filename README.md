@@ -37,7 +37,7 @@
 4) On successful bot creation, click on the "bot name" where it'll display a emulator.
 5) Train your bot by clicking on "train bot" button present at the bottom right corner of botpress studio window.
 6) You can check the progress of bot training in the terminal from where you started the botpress.
-7) With this we've successfully started our server, with this server we've to integrate in our website using <script> tag.
+7) With this we've successfully started our server, We've to integrate this server in our website using <script> tag.
 8) Integrating chatbot in our custom website <br/>
    a) Create a package structure using the following npm cmds
    - Open npm command prompt
@@ -51,15 +51,15 @@
    b) Copy and paste following code into your index.pug file
    - <script src="http://localhost:3000/assets/modules/channel-web/object_assign.js"></script>
    - <script src="http://localhost:3000/assets/modules/channel-web/inject.js"></script>
-   - <script>
-       window.botpressWebChat.init({
-         host: 'http://localhost:3000/', 
-         botId:"alvin",
-         //- host: 'http://34.255.118.102/',
-         //- botId: 'spine',
-         //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',
-         //- hideWidget: false, //to hide the bot floating icon from webpage
-       })
+   - <script> <br/>
+       window.botpressWebChat.init({<br/>
+         host: 'http://localhost:3000/', <br/>
+         botId:"alvin",<br/>
+         //- host: 'http://34.255.118.102/',<br/>
+         //- botId: 'spine',<br/>
+         //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',<br/>
+         //- hideWidget: false, //to hide the bot floating icon from webpage<br/>
+       })<br/>
      </script>
    c) Change your default port number of your website from bin/www folder of nodejs application in-order to avoid overlapping default port of botpress server(3000).
    d) Start your website using cmd "npm start" from the terminal.
