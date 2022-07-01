@@ -1,11 +1,23 @@
-# Yarn installation steps for botpress
-install node 12.18.1 MSI file from nodejs.org/fr/blog/release/v12.18.1/.
-open windows cmd as ADMINISTRATOR(below cmds won't work in vscode terminal) and enter below cmds.
-> corepack enable
-> npm i -g corepack
-> yarn init -2
-> yarn set version stable
-> yarn set version from sources(optional)
+## Yarn installation steps for botpress
+**I. First delete files/folders metioned in the below path:**
+1) C:\Program Files\Nodejs
+2) C:\Users\bhargava\AppData\Roaming\npm do the same for admin folder also(if you opened cmd as admin while installing yarn)
+3) C:\Users\bhargava\AppData\Roaming\npm-cache 
+4) C:\Users\.npmrc or delete any yarn or npm or node related files and folders
+5) C:\Users\bhargava\AppData\local\temp\ delete any yarn or npm or node related files and folders
+6) Delete recycle bin files and delete %temp% files from RUN cmd
+7) Restart your PC
+8) Check wheather all the mentioned files are deleted or not from the path
+
+**II. Install node 12.18.1 MSI file [Link to download](nodejs.org/fr/blog/release/v12.18.1/)** <br />
+**III. Open windows cmd prompt(opening as administrator is not mandatory & below cmds won't work in powershell) and enter below cmds** 
+- npm -v
+- node -v
+- corepack enable (use this cmd only if node version is >12.18.1 else ignore and continue with next step)
+- npm i -g corepack
+- yarn init -2
+- yarn set version stable
+- yarn set version from sources(optional)
 open botpress github page & click code⬇ & copy the URL.
 paste the URL in your pc directory where you want to download that git hub botpress folder.
 enter cd botpress in cmd and type below cmds.
@@ -69,17 +81,7 @@ Note : If you make any modifications using yarn start cmd, please restart your s
 
 
 # Resolving errors while installing yarn
-First delete files/folders metioned in the below path:
-1) C:\Program Files\Nodejs
-2) C:\Users\bhargava\AppData\Roaming\npm do the same for admin folder also(if you opened cmd as admin while installing yarn)
-3) C:\Users\bhargava\AppData\Roaming\npm-cache 
-4) C:\Users\.npmrc or delete any yarn or npm or node related files and folders
-5) C:\Users\bhargava\AppData\local\temp\ delete any yarn or npm or node related files and folders
-6) Delete recycle bin files and delete %temp% files from RUN cmd
 
-> Restart your PC
-> Check wheather all the mentioned files are deleted or not from the path
-> Install nodejs v12.18.1(.msi file) from botpress official documentation
 > Check npm and node versions from the windows cmd (opening in admin is not mandatory) 
 > Enter "npm i --global yarn@1.22.18" in cmd
 > Close the terminal and re-open it to check yarn version by typing "yarn -v" in cmd
