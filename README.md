@@ -65,5 +65,8 @@
    d) Start your website using cmd "npm start" from the terminal.
 
 **VI. Modifying botpress src folder **
-- Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
-**Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
+  #### 1) Applying custom CSS ####
+  - Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
+  #### 2) Changing mailId from src folder(only mail not pwd) ####
+  - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > superAdmins: 
+<br/>**Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
