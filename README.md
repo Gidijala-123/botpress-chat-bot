@@ -65,5 +65,5 @@
    d) Start your website using cmd "npm start" from the terminal.
 
 **VI. Modifying botpress src folder **
-- Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css
+- Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
 **Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
