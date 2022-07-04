@@ -9,7 +9,7 @@
 7) Restart your PC
 8) Check wheather all the mentioned files are deleted or not from the path
 
-**II. Install node 12.18.1 MSI file [Link to download](nodejs.org/fr/blog/release/v12.18.1/)** <br />
+**II. Install node 12.18.1 MSI file [Click to download](nodejs.org/fr/blog/release/v12.18.1/)** <br />
 **III. Open windows cmd prompt(opening as administrator is not mandatory & below cmds won't work in powershell) and enter below cmds** 
 - npm -v
 - node -v
@@ -18,7 +18,7 @@
 - yarn -v
 
 **IV. Now we need to clone botpress from official botpress git repository**
-- To clone git, we need "git" installed in your PC [Link to download](https://git-scm.com/downloads)
+- To clone git, we need "git" installed in your PC [Click to download](https://git-scm.com/downloads)
 - Goto folder where you want to copy that git folder
 - Paste the cmd "git clone https://github.com/botpress/botpress.git" and press enter
 - It'll clone the botpress src code from official site as a folder "botpress"
