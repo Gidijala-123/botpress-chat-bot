@@ -82,3 +82,11 @@
   - Change the code or API that you want and finally click on Save icon present at bottom-left
   
 **Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
+  
+  
+### Reference Links
+1. https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+2. https://yarnpkg.com/
+3. https://www.alibabacloud.com/blog/advanced-concepts-in-botpress-a-crash-course_596225
+4. https://socket.dev/npm/package/@botpress/channel-web
+5. https://github.com/botpress/botpress-examples/blob/master/motivation-bot/index.js
