@@ -73,5 +73,9 @@
   - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > "superAdmins": <br/>
   #### 3) To change default botpress server port number ####
   - Goto botpress(cloned folder from github) > packages > bp > dist > data > global > botpress.config.json > "port":3000 <br/>
+  #### 4) To change the name of the bot in the chat emulator ####
+  - Open botpress studio(localhost:3000) > Click config button of your bot > Change the name from the name section
+  - Changing name will instantly reflect in your website bot
+  - Sometimes restarting the npm and bot server is needed
   
 **Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
