@@ -20,8 +20,7 @@
 **IV. Now we need to clone botpress from official botpress git repository**
 - To clone git, we need "git" installed in your PC [Click to download](https://git-scm.com/downloads)
 - Goto folder where you want to copy that git folder
-- Paste the cmd "git clone https://github.com/botpress/botpress.git" and press enter
-- It'll clone the botpress src code from official site as a folder "botpress"
+- Paste the cmd "git clone https://github.com/botpress/botpress.git" and press enter, It'll clone botpress folder from official botpress github site
 - cd botpress
 - yarn cache clean
 - yarn
