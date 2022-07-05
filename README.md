@@ -17,6 +17,8 @@
 - Close the terminal and re-open it to check yarn version
 - yarn -v
 
+**Note :** Prefer installing yarn using npm rather than installing via yarn.exe file
+
 **IV. Now we need to clone botpress from official botpress git repository**
 - To clone git, we need "git" installed in your PC [Click to download](https://git-scm.com/downloads)
 - Goto folder where you want to copy that git folder
