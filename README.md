@@ -68,7 +68,7 @@
   #### 1) Applying custom CSS ####
   - Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
   #### 2) Changing mailId from src folder(only mail not pwd) ####
-  - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > superAdmins: <br/>
+  - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > "superAdmins": <br/>
   #### 3) To change default botpress server port number ####
   - Goto botpress(cloned folder from github) > packages > bp > dist > data > global > botpress.config.json > "port":3000 <br/>
   
