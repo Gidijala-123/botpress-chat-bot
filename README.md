@@ -22,6 +22,7 @@
 - Goto folder where you want to copy that git folder
 - Paste the cmd "git clone https://github.com/botpress/botpress.git" and press enter
 - It'll clone the botpress src code from official site as a folder "botpress"
+- cd botpress
 - yarn cache clean
 - yarn
 - yarn build 
