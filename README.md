@@ -1,4 +1,4 @@
-## Yarn installation steps for botpress
+## Complete Botpress installation using Yarn and NodeJS
 **I. First delete files/folders metioned in the below path:**
 1) C:\Program Files\Nodejs
 2) C:\Users\bhargava\AppData\Roaming\npm do the same for admin folder also(if you opened cmd as admin while installing yarn)
