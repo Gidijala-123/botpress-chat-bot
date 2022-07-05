@@ -67,15 +67,18 @@
    d) Start your website using cmd "npm start" from the terminal.
 
 **VI. Modifying botpress src folder**
-  #### 1) Applying custom CSS ####
+  #### 1) Applying custom CSS
   - Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
-  #### 2) Changing mailId from src folder(only mail not pwd) ####
+  #### 2) Changing mailId from src folder(only mail not pwd)
   - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > "superAdmins": <br/>
   #### 3) To change default botpress server port number ####
   - Goto botpress(cloned folder from github) > packages > bp > dist > data > global > botpress.config.json > "port":3000 <br/>
-  #### 4) To change the name of the bot in the chat emulator ####
+  #### 4) To change the name of the bot in the chat emulator
   - Open botpress studio(localhost:3000) > Click config button of your bot > Change the name from the name section
   - Changing name will instantly reflect in your website bot
   - Sometimes restarting the npm and bot server is needed
+  #### 5) To change or modify code (eg:API)
+  - Open botpress studio(localhost:3000) > Click on code editor from sidebar menu > In the Actions section, open the file in Bot <bot name> folder
+  - Change the code or API that you want and finally click on Save icon present at bottom-left
   
 **Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
