@@ -51,7 +51,7 @@
    - cd projectName
    - npm install
    - npm start
-   b) Copy and paste following code into your index.pug file<br/>
+   b) Copy and paste following code into your index.pug file after body tag<br/>
       - script(src="http://localhost:3000/assets/modules/channel-web/object_assign.js")
       - script(src="http://localhost:3000/assets/modules/channel-web/inject.js")
       - script. <br/>
