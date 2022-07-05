@@ -58,7 +58,7 @@
         window.botpressWebChat.init({<br/>
         host: 'http://localhost:3000/', <br/>
         botId:"alvin",<br/>
-        //- host: 'http://34.255.118.102/',<br/>
+        //- host: 'http://34.255.255.255/',<br/>
         //- botId: 'spine',<br/>
         //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',<br/>
         //- hideWidget: false, //to hide the bot floating icon from webpage<br/>
