@@ -64,9 +64,12 @@
    c) Change your default port number of your website from bin/www folder of nodejs application in-order to avoid overlapping default port of botpress server(3000)<br/>
    d) Start your website using cmd "npm start" from the terminal.
 
-**VI. Modifying botpress src folder **
+**VI. Modifying botpress src folder**
   #### 1) Applying custom CSS ####
   - Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
   #### 2) Changing mailId from src folder(only mail not pwd) ####
-  - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > superAdmins: 
-<br/>**Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
+  - You can change mail Id from the path botpress > packages > bp > dist > data > global > botpress.config.json > superAdmins: <br/>
+  #### 3) To change default botpress server port number ####
+  - Goto botpress(cloned folder from github) > packages > bp > dist > data > global > botpress.config.json > "port":3000 <br/>
+  
+**Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
