@@ -1,5 +1,5 @@
 ## Complete Botpress installation using Yarn and NodeJS
-**I. First delete files/folders metioned in the below path:**
+### I. First delete files/folders metioned in the below path:
 1) C:\Program Files\Nodejs
 2) C:\Users\bhargava\AppData\Roaming\npm do the same for admin folder also(if you opened cmd as admin while installing yarn)
 3) C:\Users\bhargava\AppData\Roaming\npm-cache 
@@ -9,8 +9,8 @@
 7) Restart your PC
 8) Check wheather all the mentioned files are deleted or not from the path
 
-**II. Install node 12.18.1 MSI file [Click to download](nodejs.org/fr/blog/release/v12.18.1/)** <br />
-**III. Open windows cmd prompt(opening as administrator is not mandatory & below cmds won't work in powershell) and enter below cmds** 
+### II. Install node 12.18.1 MSI file [Click to download](nodejs.org/fr/blog/release/v12.18.1/) <br />
+### III. Open windows cmd prompt(opening as administrator is not mandatory & below cmds won't work in powershell) and enter below cmds
 - npm -v
 - node -v
 - npm i --global yarn@1.22.18
@@ -19,7 +19,7 @@
 
 **Note :** Prefer installing yarn using npm rather than installing via yarn.exe file
 
-**IV. Now we need to clone botpress from official botpress git repository**
+### IV. Now we need to clone botpress from official botpress git repository
 - To clone git, we need "git" installed in your PC [Click to download](https://git-scm.com/downloads)
 - Goto folder where you want to copy that git folder
 - Paste the cmd "git clone https://github.com/botpress/botpress.git" and press enter, It'll clone botpress folder from official botpress github site
@@ -33,7 +33,7 @@
 
 **Note :** It'll take 20-30 mins for this entire process of yarn installation depending on internet speed and Don't close forcely assuming that terminal is struck
 
-**V. Creating custom nodejs project(to use botpress in this website)**
+### V. Creating custom nodejs project(to use botpress in this website)
 1) In console it'll display botpress server is exposed at "http://localhost:3000"
 2) On clicking the host link, you will be redirected to botpress studio registration page.
 3) Upon successful registration, click on "create bot" > New bot > give a name to the bot(you can give custom botId).
@@ -66,7 +66,7 @@
    c) Change your default port number of your website from bin/www folder of nodejs application in-order to avoid overlapping default port of botpress server(3000)<br/>
    d) Start your website using cmd "npm start" from the terminal.
 
-**VI. Modifying botpress src folder**
+### VI. Modifying botpress src folder###
    #### 1) Applying custom CSS
    - Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
    #### 2) Changing mailId from src folder(only mail not pwd)
@@ -84,13 +84,14 @@
 **Note :** If you make any modifications using yarn start cmd, please restart your server for each modification you've made.
   
   
-### Reference Links
-1. https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
-2. https://yarnpkg.com/
-3. https://www.alibabacloud.com/blog/advanced-concepts-in-botpress-a-crash-course_596225
-4. https://socket.dev/npm/package/@botpress/channel-web
-5. https://github.com/botpress/botpress-examples/blob/master/motivation-bot/index.js <br/>
-  #### API Integration links
-  a) https://www.adenin.com/blog/botpress-work-chatbot-tutorial/ <br/>
-  b) https://www.youtube.com/watch?v=rju2Fg9fg4I <br/>
-  c) https://www.youtube.com/watch?v=pw6CUtJ_8w0 <br/>
+### VII. Reference Links
+  #### 1) Installation guide
+  - https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+  - https://yarnpkg.com/
+  - https://www.alibabacloud.com/blog/advanced-concepts-in-botpress-a-crash-course_596225
+  - https://socket.dev/npm/package/@botpress/channel-web
+  - https://github.com/botpress/botpress-examples/blob/master/motivation-bot/index.js <br/>
+  #### 2) API Integration links
+  - https://www.adenin.com/blog/botpress-work-chatbot-tutorial/ <br/>
+  - https://www.youtube.com/watch?v=rju2Fg9fg4I <br/>
+  - https://www.youtube.com/watch?v=pw6CUtJ_8w0 <br/>
