@@ -91,5 +91,6 @@
 4. https://socket.dev/npm/package/@botpress/channel-web
 5. https://github.com/botpress/botpress-examples/blob/master/motivation-bot/index.js <br/>
   #### API Integration links
-  a) https://www.youtube.com/watch?v=rju2Fg9fg4I <br/>
-  b) https://www.youtube.com/watch?v=pw6CUtJ_8w0
+  a) https://www.adenin.com/blog/botpress-work-chatbot-tutorial/ <br/>
+  b) https://www.youtube.com/watch?v=rju2Fg9fg4I <br/>
+  c) https://www.youtube.com/watch?v=pw6CUtJ_8w0 <br/>
