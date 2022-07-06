@@ -42,7 +42,7 @@
 6) You can check the progress of bot training in the terminal from where you started the botpress.
 7) With this we've successfully started our server, We've to integrate this server in our website using <script> tag.
 8) Integrating chatbot in our custom website <br/>
-   a) Create a package structure using the following npm cmds
+       a) Create a package structure using the following npm cmds
    - Open npm command prompt
    - npm install express<space>-g
    - npm install express-generator -g
@@ -50,23 +50,26 @@
    - express --view=pug projectName
    - cd projectName
    - npm install
-   - npm start
+   - npm start <br/>
+  
    b) Copy and paste following code into your index.pug file after body tag<br/>
-      - script(src="http://localhost:3000/assets/modules/channel-web/object_assign.js")
-      - script(src="http://localhost:3000/assets/modules/channel-web/inject.js")
-      - script. <br/>
-        window.botpressWebChat.init({<br/>
-        host: 'http://localhost:3000/', <br/>
-        botId:"alvin",<br/>
-        //- host: 'http://34.255.255.255/',<br/>
-        //- botId: 'spine',<br/>
-        //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',<br/>
-        //- hideWidget: false, //to hide the bot floating icon from webpage<br/>
-        })<br/>
+   - script(src="http://localhost:3000/assets/modules/channel-web/object_assign.js")
+   - script(src="http://localhost:3000/assets/modules/channel-web/inject.js")
+   - script. <br/>
+     window.botpressWebChat.init({<br/>
+     host: 'http://localhost:3000/', <br/>
+     botId:"alvin",<br/>
+     //- host: 'http://34.255.255.255/',<br/>
+     //- botId: 'spine',<br/>
+     //- extraStylesheet: '/modules/channel-web/assets/gbr-custom-styles.css',<br/>
+     //- hideWidget: false, //to hide the bot floating icon from webpage<br/>
+     })<br/>
+  
    c) Change your default port number of your website from bin/www folder of nodejs application in-order to avoid overlapping default port of botpress server(3000)<br/>
+  
    d) Start your website using cmd "npm start" from the terminal.
 
-### VI. Modifying botpress src folder###
+### VI. Modifying botpress src folder
    #### 1) Applying custom CSS
    - Goto botpress(cloned folder from github) > modules > channel-web > assets > default.css <br/>
    #### 2) Changing mailId from src folder(only mail not pwd)
