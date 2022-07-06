@@ -89,4 +89,7 @@
 2. https://yarnpkg.com/
 3. https://www.alibabacloud.com/blog/advanced-concepts-in-botpress-a-crash-course_596225
 4. https://socket.dev/npm/package/@botpress/channel-web
-5. https://github.com/botpress/botpress-examples/blob/master/motivation-bot/index.js
+5. https://github.com/botpress/botpress-examples/blob/master/motivation-bot/index.js <br/>
+  #### API Integration links
+  a) https://www.youtube.com/watch?v=rju2Fg9fg4I <br/>
+  b) https://www.youtube.com/watch?v=pw6CUtJ_8w0
