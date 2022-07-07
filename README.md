@@ -9,7 +9,7 @@
 7) Restart your PC
 8) Check wheather all the mentioned files are deleted or not from the path
 
-### II. Install node 12.18.1 MSI file [Click to download](nodejs.org/fr/blog/release/v12.18.1/) <br />
+### II. Install node 12.18.1 MSI file [Click to download](https://nodejs.org/download/release/v12.18.1/) <br />
 ### III. Open windows cmd prompt(opening as administrator is not mandatory & below cmds won't work in powershell) and enter below cmds
 - npm -v
 - node -v
