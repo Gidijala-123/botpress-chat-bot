@@ -99,3 +99,5 @@
   - https://www.adenin.com/blog/botpress-work-chatbot-tutorial/ <br/>
   - https://www.youtube.com/watch?v=rju2Fg9fg4I <br/>
   - https://www.youtube.com/watch?v=pw6CUtJ_8w0 <br/>
+  #### 3) Displaying image via API
+  - https://www.youtube.com/watch?v=zaVwJ8j8cZI
