@@ -103,7 +103,7 @@
   - https://www.youtube.com/watch?v=zaVwJ8j8cZI
   #### 4) Free API's 
   a) Online Shopping : https://fakestoreapi.com/ <br/>
-  b) Countries Data : https://apis.ccbp.in/countries-data
+  b) Countries Data : https://apis.ccbp.in/countries-data <br/>
   c) Makeup Items Shopping : http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline <br/>
   d) Breweries (Beers) : https://api.openbrewerydb.org/breweries <br/>
   e) License on Food Court : https://api.fda.gov/food/enforcement.json?limit=10 <br/>
