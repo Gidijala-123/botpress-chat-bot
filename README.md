@@ -101,3 +101,6 @@
   - https://www.youtube.com/watch?v=pw6CUtJ_8w0 <br/>
   #### 3) Displaying image via API
   - https://www.youtube.com/watch?v=zaVwJ8j8cZI
+  
+### VIII. Modifying UI of Botpress Studio
+  #### 1) You can provide custom CSS for Botpress-Studio by going to the path: botpress > packages > bp > dist > admin > ui > public > static > js >                             main.b025657d.chunk.js > search the class name & change the existing css code there itself
