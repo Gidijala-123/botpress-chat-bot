@@ -102,7 +102,7 @@
   #### 3) Displaying image via API
   - https://www.youtube.com/watch?v=zaVwJ8j8cZI
   #### 4) Free API's 
-  a) OMDB(Movie Details) : https://www.omdbapi.com/
+  a) OMDB(Movie Details) : https://www.omdbapi.com/ <br/>
   b) Online Shopping : https://fakestoreapi.com/ <br/>
   c) Countries Data : https://apis.ccbp.in/countries-data <br/>
   d) Makeup Items Shopping : http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline <br/>
