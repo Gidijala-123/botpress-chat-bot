@@ -101,6 +101,16 @@
   - https://www.youtube.com/watch?v=pw6CUtJ_8w0 <br/>
   #### 3) Displaying image via API
   - https://www.youtube.com/watch?v=zaVwJ8j8cZI
+  #### 4) Free API's 
+  a) Online Shopping : https://fakestoreapi.com/
+  b) Countries Data : https://apis.ccbp.in/countries-data
+  c) Makeup Items Shopping : http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
+  d) Breweries (Beers) : https://api.openbrewerydb.org/breweries
+  e) License on Food Court : https://api.fda.gov/food/enforcement.json?limit=10
+  f) Gaming : https://api.opensea.io/api/v1/assets?format=json
+  g) Public API Entries : https://api.publicapis.org/entries
+  h) Beers Review : https://api.punkapi.com/v2/beers
+  i) Techcrunch : https://techcrunch.com/wp-json/wp/v2/posts?per_page=100&context=embed
   
 ### VIII. Modifying UI of Botpress Studio
   #### 1) You can provide custom CSS for Botpress-Studio by going to the path: botpress > packages > bp > dist > admin > ui > public > static > js >                             main.b025657d.chunk.js > search the class name & change the existing css code there itself
